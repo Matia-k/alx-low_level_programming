@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
  * main - takes no argument
- * Returns zero
+ * Return: zero if successful
  */
 int main(void)
 {
