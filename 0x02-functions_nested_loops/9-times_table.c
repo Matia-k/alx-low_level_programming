@@ -11,13 +11,21 @@ void times_table(void)
 
 	m = 0;
 	do {
-		for (n = 0; n < 9; n++)
+		l = m * 0;
+		putchar(l + '0');
+		for (n = 1; n <= 9; n++)
 		{
 			p = m * n;
-			printf("%d, ", p);
+			if (p >= 10)
+			{
+				printf(", %d", p);
+			}
+			else
+			{
+				printf(",  %d", p);
+			}
 		}
-		l = m * 9;
-		printf("%d\n", l);
+		putchar('\n');
 		m++;
 	} while (m < 10);
 }
