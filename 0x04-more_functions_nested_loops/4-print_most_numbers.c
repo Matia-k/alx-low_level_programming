@@ -1,7 +1,7 @@
 #include "main.h"
 /**
   *print_most_numbers - prints numbers 0 - 9,followed by anew line
-  *
+  *Does not print 2 and 4.
   */
 void print_most_numbers(void)
 {
@@ -9,6 +9,8 @@ void print_most_numbers(void)
 
 	for (i = '0'; i <= '9'; i++)
 	{
+		if (i == 2 || i == 4)
+			continue;
 		putchar(i);
 	}
 	putchar('\n');
