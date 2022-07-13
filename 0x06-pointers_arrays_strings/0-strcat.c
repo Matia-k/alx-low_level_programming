@@ -10,7 +10,6 @@
 char *_strcat(char *dest, char *src)
 {
 	int len1, len2, len, i;
-	char *added = NULL;
 
 	len1 = 0;
 	len2 = 0;
@@ -21,19 +20,14 @@ char *_strcat(char *dest, char *src)
 
 	len = len1 + len2;
 
-	for (i = 0; i < len1; i++)
-	{
-		added[i] = dest[i];
-	}
-
 	for (i = 0; i < len2; i++)
 	{
-		added[i + len1] = src[i];
+		dest[i + len1] = src[i];
 	}
 
-	added[len] = '\0';
+	dest[len] = '\0';
 
-	return (added);
+	return (dest);
 
 }
 
