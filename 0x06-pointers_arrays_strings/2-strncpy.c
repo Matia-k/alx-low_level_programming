@@ -8,12 +8,9 @@
 */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int len1, len2, i;
+	int len2, i;
 
-	len1 = 0;
 	len2 = 0;
-	while (dest[len1] != 0)
-		len1++;
 	while (src[len2] != 0)
 		len2++;
 
