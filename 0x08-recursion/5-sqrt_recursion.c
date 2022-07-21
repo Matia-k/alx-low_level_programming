@@ -16,7 +16,7 @@ int _sqrt_recursion(int n)
 	ret = rep_subtraction(n, odd);
 	if (ret < 0)
 		return (-1);
-	
+
 	return (ret);
 }
 
