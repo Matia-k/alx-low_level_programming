@@ -14,12 +14,12 @@ int main(int argc, char *argv[])
 	if (argc == 1)
 	{
 		printf("0\n");
-		return (0);
+		return (1);
 	}
 
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) == 0)
+		if (atoi(argv[i]) <= 0)
 		{
 			printf("Error\n");
 			return (1);
