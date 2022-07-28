@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 
@@ -29,6 +28,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	for (i = 0; i < nmemb; i++)
 		type_arr[i] = '\0';
 
-	return (type_arr);
+	return (arr);
 
 }
