@@ -25,7 +25,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	type_arr = arr;
 
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < bytes; i++)
 		type_arr[i] = '\0';
 
 	return (arr);
