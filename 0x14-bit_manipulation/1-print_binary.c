@@ -8,14 +8,8 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask, fig;
+	if (n > 1)
+		print_binary(n >> 1);
 
-	mask = 1 << 8;
-
-	for (fig = 1; fig <= 8; fig++)
-	{
-		_putchar(n & mask ? '1' : '0');
-		n = n << 1;
-	}
-	_putchar('\n');
+	_putchar((n & 1) + '0');
 }
