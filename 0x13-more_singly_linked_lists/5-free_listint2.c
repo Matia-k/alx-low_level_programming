@@ -8,7 +8,7 @@ void free_listint2(listint_t **head)
 {
 	listint_t *buf;
 
-	if (*head == NULL)
+	if (head == NULL)
 		return;
 	/**
 	 * iterate through the list.
@@ -22,5 +22,5 @@ void free_listint2(listint_t **head)
 		free(*head);
 		*head = buf;
 	}
-	*head = NULL;
+	head = NULL;
 }
