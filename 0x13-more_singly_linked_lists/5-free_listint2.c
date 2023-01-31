@@ -7,6 +7,9 @@
 void free_listint2(listint_t **head)
 {
 	listint_t *buf;
+
+	if (head = NULL)
+		return;
 	/**
 	 * iterate through the list.
 	 * First keep track of address of next node(in a buffer pointer)
