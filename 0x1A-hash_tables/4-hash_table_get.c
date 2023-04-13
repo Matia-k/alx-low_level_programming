@@ -1,0 +1,17 @@
+#include "hash_tables.h"
+
+/**
+ * hash_table_get - retrieves a value associated with a key.
+ * @ht: the hash_table to look into.
+ * @key: the key to look for.
+ * Return: the value assocaited with key, or NULL if key not found.
+ */
+char *hash_table_get(const hash_table_t *ht, const char *key)
+{
+	unsigned long int index;
+
+	index = key_index((unsigned char *)key, ht->size);
+	if (ht == NULL || ht->array[index] == NULL)
+		return (NULL);
+	return (ht->array[index]->value);
+}
