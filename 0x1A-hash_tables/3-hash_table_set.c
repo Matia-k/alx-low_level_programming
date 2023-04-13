@@ -33,7 +33,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((unsigned char *)key, ht->size);
 
-	for (i = 0; i < ht->array[i]; i++)
+	for (i = 0; ht->array[i]; i++)
 	{
 		if (i == index)
 		{
