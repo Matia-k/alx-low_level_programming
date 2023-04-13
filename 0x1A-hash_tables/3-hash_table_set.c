@@ -33,18 +33,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((unsigned char *)key, ht->size);
 
-	for (i = 0; ht->array[i]; i++)
+	for (i = index; ht->array[i]; i++)
 	{
-		if (i == index)
+		if (ht->array[i] == NULL)
+			ht->array[i] = node;
+		else
 		{
-			if (ht->array[i] == NULL)
-				ht->array[i] = node;
-			else
-			{
-				while (ht->array[i])
-					ht->array[i] = ht->array[i]->next;
-				ht->array[i] = node;
-			}
+			while (ht->array[i])
+				ht->array[i] = ht->array[i]->next;
+			ht->array[i] = node;
 		}
 	}
 	return (1);
